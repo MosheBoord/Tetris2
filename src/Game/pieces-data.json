@@ -1,0 +1,88 @@
+{
+  "pieces": [
+    {
+      "name": "I",
+      "color": "blue",
+      "spawnRow": -2,
+      "length": 4,
+      "cells": [
+        { "x": 0, "y": 1 },
+        { "x": 1, "y": 1 },
+        { "x": 2, "y": 1 },
+        { "x": 3, "y": 1 }
+      ]
+    },
+    {
+      "name": "J",
+      "color": "purple",
+      "spawnRow": -2,
+      "length": 3,
+      "cells": [
+        { "x": 0, "y": 0 },
+        { "x": 0, "y": 1 },
+        { "x": 1, "y": 1 },
+        { "x": 2, "y": 1 }
+      ]
+    },
+    {
+      "name": "L",
+      "color": "green",
+      "spawnRow": -2,
+      "length": 3,
+      "cells": [
+        { "x": 2, "y": 0 },
+        { "x": 0, "y": 1 },
+        { "x": 1, "y": 1 },
+        { "x": 2, "y": 1 }
+      ]
+    },
+    {
+      "name": "S",
+      "color": "cyan",
+      "spawnRow": -2,
+      "length": 3,
+      "cells": [
+        { "x": 1, "y": 0 },
+        { "x": 2, "y": 0 },
+        { "x": 0, "y": 1 },
+        { "x": 1, "y": 1 }
+      ]
+    },
+    {
+      "name": "O",
+      "color": "yellow",
+      "spawnRow": -2,
+      "length": 2,
+      "cells": [
+        { "x": 0, "y": 0 },
+        { "x": 1, "y": 0 },
+        { "x": 0, "y": 1 },
+        { "x": 1, "y": 1 }
+      ]
+    },
+    {
+      "name": "T",
+      "color": "orange",
+      "spawnRow": -2,
+      "length": 3,
+      "cells": [
+        { "x": 1, "y": 0 },
+        { "x": 0, "y": 1 },
+        { "x": 1, "y": 1 },
+        { "x": 2, "y": 1 }
+      ]
+    },
+    {
+      "name": "Z",
+      "color": "red",
+      "spawnRow": -3,
+      "length": 3,
+      "cells": [
+        { "x": 0, "y": 0 },
+        { "x": 1, "y": 0 },
+        { "x": 1, "y": 1 },
+        { "x": 2, "y": 1 }
+      ]
+    }
+  ]
+}

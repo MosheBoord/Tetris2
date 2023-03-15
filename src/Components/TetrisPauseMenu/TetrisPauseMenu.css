@@ -1,0 +1,16 @@
+.tetris-pause-menu-container {
+  display: block;
+  position: absolute;
+  /* background-color: aquamarine; */
+  /* background-color: black; */
+  /* opacity: 0.5; */
+  backdrop-filter: blur(20px);
+  /* backdrop-filter: grayscale(0.4); */
+  z-index: 10;
+}
+
+.pause-menu-button-container {
+  background-color: black;
+  border: 2px solid gold;
+  position: absolute;
+}

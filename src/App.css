@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+  display: block;
+  margin: 0;
+  /* height: 100vh;
+  width: 100vw; */
+}
+
+.TetrisGridContainer {
+  /* padding: ; */
+  display: flex;
+}
+
+.AppHeader {
+  display: block;
+  background-color: black;
+  height: 100px;
+}
+
+.AppFooter {
+  display: block;
+  background-color: black;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.AppBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* justify-content: space-around; */
+}
+
+.LeftContent {
+  flex: 2;
+  /* display: inline-block; */
+}
+
+.tetris-game {
+  display: flex;
+  position: relative;
+  margin: auto;
+  /* height: var(--tetris-game-height, 100vh);
+  width: var(--tetris-game-width, 100vw); */
+  width: fit-content;
+}
+
+.Content {
+  flex: 2;
+  /* width: 70vw; */
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+}
+
+.rainbow-fill-bar {
+  border: 1px solid grey;
+}
+
+.RightContent {
+  flex: 2;
+}
+
+.earned-fillbar-rewards-container {
+  background-color: black;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.earned-reward {
+  border-radius: 50%;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.earned-reward-shine {
+  background-color: white;
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+  opacity: 0.3;
+  /* animation: earned-reward-shine-fade-in-out 1s infinite; */
+}
+
+@keyframes earned-reward-shine-fade-in-out {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,92 @@
+.TetrisGrid {
+  /* length: 100%;
+  width: 100%; */
+  /* border: 5px solid red; */
+  display: block;
+  flex: 1;
+  background-color: black;
+  /* height: 80vh;
+  width: 40vh; */
+  --completed-row-rate: 0.444s;
+}
+
+.row-container {
+  position: relative;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.completed-row {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  z-index: 6;
+  background-image: linear-gradient(
+    to right,
+    var(--completed-row-color-gradient)
+  );
+  /* animation: fade-in-out 0.444s linear; */
+  animation: fade-in-out var(--completed-row-rate) linear;
+}
+
+.completed-row-white {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  z-index: 5;
+  /* animation: fade-in-out-white 0.444s linear 0.222s; */
+  animation: fade-in-out-white var(--completed-row-rate) linear
+    calc((var(--completed-row-rate) / 2));
+}
+
+.row-disappearing {
+  opacity: 0;
+  /* transition: opacity 0s linear 0.222s; */
+  transition: opacity 0s linear calc((var(--completed-row-rate) / 2));
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    height: 0%;
+    top: 50%;
+  }
+  50% {
+    opacity: 1;
+    height: 100%;
+    top: 0%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-out-white {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
