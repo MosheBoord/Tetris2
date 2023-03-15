@@ -9,6 +9,9 @@
 .TetrisGridContainer {
   /* padding: ; */
   display: flex;
+  /* transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%; */
 }
 
 .AppHeader {
@@ -44,6 +47,21 @@
   /* height: var(--tetris-game-height, 100vh);
   width: var(--tetris-game-width, 100vw); */
   width: fit-content;
+}
+
+.right-side-panel {
+  position: relative;
+  background-color: black;
+}
+
+.right-side-panel-content {
+  display: flex;
+  flex-direction: column;
+  /* transform: translateX(-50%) translateY(-50%); */
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  color: white;
 }
 
 .Content {
