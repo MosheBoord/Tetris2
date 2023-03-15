@@ -70,6 +70,7 @@ function App() {
     twoPieceCount: 0,
     rainbowPieceCount: 0,
     displaySettingsDialog: false,
+    score: 0,
     settings: {},
   });
 
@@ -215,15 +216,27 @@ function App() {
               })}
             </div>
             <div
-              className="TetrisGridContainer"
+              className="right-side-panel"
               style={{
-                ...nextPieceGridSize,
+                width: "20vh",
               }}
             >
-              <TetrisGrid
-                grid={appState.nextPieceGrid}
-                rowHeight={100 / appState.nextPieceGrid.length}
-              ></TetrisGrid>
+              <div className="right-side-panel-content">
+                Next Piece
+                <div
+                  className="TetrisGridContainer"
+                  style={{
+                    ...nextPieceGridSize,
+                  }}
+                >
+                  <TetrisGrid
+                    grid={appState.nextPieceGrid}
+                    rowHeight={100 / appState.nextPieceGrid.length}
+                  ></TetrisGrid>
+                </div>
+                Score
+                <div className="score">{appState.score}</div>
+              </div>
             </div>
           </div>
         </div>

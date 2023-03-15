@@ -165,6 +165,7 @@ export default class TetrisGame extends VideoGame {
       twoPieceCount: 0,
       rainbowPieceCount: 0,
       displaySettingsDialog: false,
+      score: 0,
       settings,
     };
     this.phase = this.getStandardPieceFallingPhase();
@@ -386,6 +387,7 @@ export default class TetrisGame extends VideoGame {
         }
 
         timeInAir++;
+        this.state.score++;
 
         if (
           this.lossPerFrameTwoPieceFillLevel * timeInAir <
