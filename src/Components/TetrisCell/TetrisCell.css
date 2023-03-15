@@ -1,0 +1,227 @@
+.cell-content {
+  width: 100%;
+  height: 100%;
+  /* border-style: solid;
+  border-width: 100% 100% 0 0; */
+  /* /* border-color: orange transparent transparent transparent; */
+  /* background-image: 
+  linear-gradient(to bottom right, transparent 50%, red 0), linear-gradient(
+    /* to top right,
+    red 50%,
+    transparent 0
+  /* ); */
+}
+
+/* THIS IS HARD CODED FOR OUR SETTINGS I WOULD LIKE TO LOOK INTO A BETTER APPROACH */
+.text-cell {
+  color: white;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  font-size: 200%;
+}
+
+.cell-part {
+  /* --cell_shading_darkest: 80%;
+  --cell_shading_dark: 90%;
+  --cell_shading_light: 110%;
+  --cell_shading_lightest: 200%; */
+  --cell_shading_spacing: 65%;
+  --cell_border_thickness: 20%;
+  --cell_shading_shift: -10%;
+  opacity: 70%;
+}
+
+.tetris-cell {
+  position: relative;
+  height: 100%;
+}
+
+.cell-part {
+  position: absolute;
+}
+
+.top-left.cell-part {
+  width: var(--cell_border_thickness);
+  height: var(--cell_border_thickness);
+  background-image: linear-gradient(to top right, transparent 50%, grey 0);
+  top: 0;
+  left: 0;
+  filter: brightness(
+    calc(100% + (2 * var(--cell_shading_spacing)) + var(--cell_shading_shift))
+  );
+}
+
+.top-middle.cell-part {
+  width: calc(100% - (2 * (var(--cell_border_thickness))));
+  height: var(--cell_border_thickness);
+  background-color: grey;
+  top: 0;
+  left: var(--cell_border_thickness);
+  filter: brightness(
+    calc(100% + (2 * var(--cell_shading_spacing)) + var(--cell_shading_shift))
+  );
+}
+
+.top-right.cell-part {
+  width: var(--cell_border_thickness);
+  height: var(--cell_border_thickness);
+  background-image: linear-gradient(to top left, transparent 50%, grey 0);
+  top: 0;
+  left: calc(100% - var(--cell_border_thickness));
+  filter: brightness(
+    calc(100% + (2 * var(--cell_shading_spacing)) + var(--cell_shading_shift))
+  );
+}
+
+.left-top.cell-part {
+  width: var(--cell_border_thickness);
+  height: var(--cell_border_thickness);
+  background-image: linear-gradient(to bottom left, transparent 50%, grey 0);
+  top: 0;
+  left: 0;
+  filter: brightness(
+    calc(100% + var(--cell_shading_spacing) + var(--cell_shading_shift))
+  );
+}
+
+.left-middle.cell-part {
+  width: var(--cell_border_thickness);
+  height: calc(100% - (2 * (var(--cell_border_thickness))));
+  background-color: grey;
+  top: var(--cell_border_thickness);
+  left: 0;
+  filter: brightness(
+    calc(100% + var(--cell_shading_spacing) + var(--cell_shading_shift))
+  );
+}
+
+.left-bottom.cell-part {
+  width: var(--cell_border_thickness);
+  height: var(--cell_border_thickness);
+  background-image: linear-gradient(to top left, transparent 50%, grey 0);
+  top: calc(100% - var(--cell_border_thickness));
+  left: 0;
+  filter: brightness(
+    calc(100% + var(--cell_shading_spacing) + var(--cell_shading_shift))
+  );
+}
+
+.bottom-left.cell-part {
+  width: var(--cell_border_thickness);
+  height: var(--cell_border_thickness);
+  background-image: linear-gradient(to bottom right, transparent 50%, grey 0);
+  bottom: 0;
+  left: 0;
+  filter: brightness(
+    calc(100% - (2 * var(--cell_shading_spacing)) + var(--cell_shading_shift))
+  );
+}
+
+.bottom-middle.cell-part {
+  width: calc(100% - (2 * (var(--cell_border_thickness))));
+  height: var(--cell_border_thickness);
+  background-color: grey;
+  bottom: 0;
+  left: var(--cell_border_thickness);
+  filter: brightness(
+    calc(100% - (2 * var(--cell_shading_spacing)) + var(--cell_shading_shift))
+  );
+}
+
+.bottom-right.cell-part {
+  width: var(--cell_border_thickness);
+  height: var(--cell_border_thickness);
+  background-image: linear-gradient(to bottom left, transparent 50%, grey 0);
+  bottom: 0;
+  left: calc(100% - var(--cell_border_thickness));
+  filter: brightness(
+    calc(100% - (2 * var(--cell_shading_spacing)) + var(--cell_shading_shift))
+  );
+}
+
+.right-top.cell-part {
+  width: var(--cell_border_thickness);
+  height: var(--cell_border_thickness);
+  background-image: linear-gradient(to bottom right, transparent 50%, grey 0);
+  top: 0;
+  right: 0;
+  filter: brightness(
+    calc(100% - var(--cell_shading_spacing) + var(--cell_shading_shift))
+  );
+}
+
+.right-middle.cell-part {
+  width: var(--cell_border_thickness);
+  height: calc(100% - (2 * (var(--cell_border_thickness))));
+  background-color: grey;
+  top: var(--cell_border_thickness);
+  right: 0;
+  filter: brightness(
+    calc(100% - var(--cell_shading_spacing) + var(--cell_shading_shift))
+  );
+}
+
+.right-bottom.cell-part {
+  width: var(--cell_border_thickness);
+  height: var(--cell_border_thickness);
+  background-image: linear-gradient(to top right, transparent 50%, grey 0);
+  top: calc(100% - var(--cell_border_thickness));
+  right: 0;
+  filter: brightness(
+    calc(100% - var(--cell_shading_spacing) + var(--cell_shading_shift))
+  );
+}
+
+.center.cell-part {
+  width: calc(100% - (2 * (var(--cell_border_thickness))));
+  height: calc(100% - (2 * (var(--cell_border_thickness))));
+  background-color: grey;
+  top: var(--cell_border_thickness);
+  left: var(--cell_border_thickness);
+  filter: brightness(100% + var(--));
+}
+
+.cell-color-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+  z-index: -2;
+  filter: brightness(
+    calc(100% + var(--cell_shading_spacing) - var(--cell_shading_shift))
+  );
+}
+.cell-color-underlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 50%;
+  z-index: 2;
+  filter: brightness(
+    calc(100% + var(--cell_shading_spacing) - var(--cell_shading_shift))
+  );
+}
+
+.black-center-overlay {
+  width: calc(100% - (2 * (var(--cell_border_thickness))));
+  height: calc(100% - (2 * (var(--cell_border_thickness))));
+  background-color: black;
+  top: var(--cell_border_thickness);
+  left: var(--cell_border_thickness);
+  opacity: 100%;
+  z-index: 3;
+}
+
+.rainbow {
+  background-image: linear-gradient(
+    to bottom right,
+    red 20%,
+    orange 35%,
+    yellow 45%,
+    green 60%,
+    blue 75%,
+    purple 85%,
+    violet
+  );
+}
